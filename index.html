@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weather</title>
+  <title>Max Pesci Weather</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="app">
+    <p class="brand">Max Pesci Weather</p>
+
     <form id="search" class="glass search">
       <input id="city" type="text" placeholder="Search city…" autocomplete="off" />
       <button type="submit" aria-label="Search">⌕</button>
@@ -38,6 +40,7 @@
     </section>
 
     <p id="error" class="error"></p>
+    <p class="footer">Made by Max Pesci · Data from Open-Meteo</p>
   </main>
   <script src="app.js"></script>
 </body>

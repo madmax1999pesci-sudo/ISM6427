@@ -2,8 +2,8 @@
 
 html {
   min-height: 100%;
-  background: linear-gradient(160deg, #1e3c72 0%, #2a5298 40%, #6dd5ed 100%) fixed;
-  background-color: #2a5298;
+  background: linear-gradient(160deg, #0b0b0d 0%, #16161a 50%, #1f1a0e 100%) fixed;
+  background-color: #0b0b0d;
 }
 
 body {
@@ -21,8 +21,8 @@ body::before, body::after {
   filter: blur(80px);
   z-index: -1;
 }
-body::before { width: 320px; height: 320px; background: #ff9a9e; top: -80px; left: -80px; opacity: .5; }
-body::after  { width: 380px; height: 380px; background: #a18cd1; bottom: -100px; right: -100px; opacity: .5; }
+body::before { width: 320px; height: 320px; background: #ffcc00; top: -80px; left: -80px; opacity: .25; }
+body::after  { width: 380px; height: 380px; background: #ff9f0a; bottom: -100px; right: -100px; opacity: .2; }
 
 .app {
   max-width: 480px;
@@ -33,13 +33,13 @@ body::after  { width: 380px; height: 380px; background: #a18cd1; bottom: -100px;
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 214, 10, 0.18);
   border-radius: 22px;
   padding: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
 }
 
 h2 {
@@ -47,7 +47,8 @@ h2 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .05em;
-  opacity: .7;
+  color: #ffd60a;
+  opacity: .85;
   margin-bottom: 10px;
 }
 
@@ -59,14 +60,14 @@ h2 {
 }
 .search input::placeholder { color: rgba(255,255,255,.7); }
 .search button {
-  background: rgba(255,255,255,.2); border: none; color: #fff;
+  background: #ffd60a; border: none; color: #111;
   width: 36px; height: 36px; border-radius: 10px; font-size: 20px; cursor: pointer;
 }
 
 /* Current */
 .current { text-align: center; padding: 28px 16px; }
 .current h1 { font-size: 30px; font-weight: 400; }
-.temp { font-size: 88px; font-weight: 200; line-height: 1; margin: 6px 0; }
+.temp { font-size: 88px; font-weight: 200; line-height: 1; margin: 6px 0; color: #ffd60a; }
 .condition { font-size: 20px; opacity: .9; }
 .hilo { font-size: 17px; margin-top: 4px; opacity: .9; }
 
@@ -82,7 +83,7 @@ h2 {
   grid-template-columns: 56px 32px 1fr;
   align-items: center;
   padding: 10px 0;
-  border-top: 1px solid rgba(255,255,255,.2);
+  border-top: 1px solid rgba(255,255,255,.1);
   font-size: 17px;
 }
 .day:first-child { border-top: none; }
@@ -90,11 +91,14 @@ h2 {
 .range { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
 .range .lo { opacity: .7; width: 34px; text-align: right; }
 .range .hi { width: 34px; text-align: right; }
-.bar { flex: 1; height: 5px; border-radius: 3px; background: rgba(255,255,255,.2); position: relative; max-width: 120px; }
-.bar span { position: absolute; top: 0; bottom: 0; border-radius: 3px; background: linear-gradient(90deg, #7ee8fa, #f9d423); }
+.bar { flex: 1; height: 5px; border-radius: 3px; background: rgba(255,255,255,.12); position: relative; max-width: 120px; }
+.bar span { position: absolute; top: 0; bottom: 0; border-radius: 3px; background: linear-gradient(90deg, #ffe066, #ff9f0a); }
 
 /* Detail tiles */
 .details { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .tile p { font-size: 28px; font-weight: 300; }
 
 .error { text-align: center; color: #ffd6d6; min-height: 1em; }
+
+.brand { text-align: center; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #ffd60a; opacity: .9; }
+.footer { text-align: center; font-size: 12px; opacity: .5; }
